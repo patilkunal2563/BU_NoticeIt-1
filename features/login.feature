@@ -29,3 +29,9 @@ Feature: Login
         And I press "Login"
         Then I go to the home page
 
+    Scenario: Successful Logout
+        Given a logged in user
+        And I go to the home page
+        And I click "Logout"
+        Then I go to the login page
+
