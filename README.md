@@ -11,10 +11,10 @@ Simple way to create Events, schedule Meet ups, post notices.Also a site to buy,
 
 Planned Features
 ---------------------------------------------------------------------------------------
-1)Up to date dynamic Notices 
-2)Sign-up for events, 
-3)browse all notices by category and date 
-4)Meet-Up Calender 
+1)Up to date dynamic Notices  
+2)Sign-up for events   
+3)browse all notices by category and date  
+4)Meet-Up Calender  
 
 Minimum Viable Product 
 ---------------------------------------------------------------------------------------
