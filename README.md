@@ -1,6 +1,6 @@
                                     BUNoticeIT- A simple Online Notice Board
            ---------------------------------------------------------------------------------------
-                                    ==========================================
+                                    
 ![alt tag](http://i172.photobucket.com/albums/w27/Kunal_Patil/scrshot_zpsuvwv2rrs.jpg)
 
 BU NoticeIt is a ruby on rails SAAS app which helps to provide online colllege notices (Like a noticeboard but just for Binghamton University students! ). 
@@ -46,9 +46,9 @@ https://agileventures.org/projects/bu-noticit
 
 Collaborators
 ---------------------------------------------------------------------------------------
-1) Anup Patil \n
-2) Kunal Patil \n
-3) Aditya Tungaturthi \n
-4) Abhijit Jachak \n
+1) Anup Patil                                                                                                                 
+2) Kunal Patil                                                                                                                
+3) Aditya Tungaturthi                                                                                                         
+4) Abhijit Jachak
 
 
