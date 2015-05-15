@@ -1,0 +1,64 @@
+!!!
+%html
+  %head
+    %title #{@page_title} to BU NoticeIt
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+    = csrf_meta_tags
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    = yield :head
+  %body
+    
+
+
+    = display_flash
+
+    / The main header displayed on all pages
+    / Sometimes will be shorted as the page content dictates. 
+    %header.main{:class => @full_header ? 'full' : 'basic'}
+      .inner
+        / Primary navigation
+        %nav.main
+
+        
+
+          %h2
+          %p.intro
+
+
+    
+    / Main content section
+    %section.content
+      .inner
+        %nav1.main
+          %ul
+            %li= link_to "Home", root_path, :nav_item => :home
+            %li
+              = link_to "Categories", catalogue_path, :nav_item => :catalogue, :class => 'noborder'
+              %ul
+                - for category in Notices::ProductCategory.ordered
+                  %li= link_to category.name, products_path(category.permalink)
+              %li= link_to "Add Notice", "notices/products/new"
+              %li= link_to "View my Notices", "notices/products"
+              %li= link_to "Logout", :logout, :method => :delete
+
+
+
+        / Sidebar
+        %section.sidebar
+          - if content_for?(:sidebar)
+            = yield :sidebar
+          - else
+            = render 'shared/basket'
+            = render 'shared/reasons'
+      
+        / Primary section
+        %section.primary
+          = yield
+      
+    / Footer
+    %footer.main
+      .inner
+
+        / Useful footer links (policies etc...)
+

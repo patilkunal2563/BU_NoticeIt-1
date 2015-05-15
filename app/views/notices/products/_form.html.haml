@@ -1,0 +1,64 @@
+= form_for @product, :html => {:multipart => true} do |f|
+  = f.error_messages
+  = field_set_tag "Add a Notice" do
+    %dl
+      %dt= f.label "Category"
+      %dd= f.collection_select :product_category_id, Notices::ProductCategory.ordered, :id, :name, {:include_blank => true}, {:class => 'chosen'}
+
+
+
+    .splitContainer
+      %dl.third
+        %dt= f.label :name
+        %dd= f.text_field :name, :class => 'text focus'
+      %dl.third
+        %dt
+        %dd
+    %dl
+      %dt= f.label :description
+      %dd= f.text_area :description, :class => 'text'
+    %dl
+      %dt= f.label :short_description
+      %dd= f.text_area :short_description, :class => 'text'
+    %dl
+      %dt
+      %dd
+    %dl
+      %dd= f.hidden_field :tax_rate_id, value: current_user.id
+  
+
+  = field_set_tag "Attachments" do
+    .splitContainer
+      %dl.half
+        %dt= f.label :default_image_file, "Default Image"
+        %dd
+          = attachment_preview @product.default_image
+          %p= f.file_field :default_image_file
+      %dl.half
+        %dt
+        %dd
+          
+          %p
+     
+  - unless @product.has_variants?   
+    = field_set_tag "Pricing" do
+      .splitContainer
+        %dl.third
+          %dt= f.label :price
+          %dd
+            .moneyInput
+              .currency= "$"
+              = f.text_field :price, :class => 'text'
+        %dl.third
+          %dt
+          %dd
+            
+        %dl.third
+          %dt
+          %dd
+  
+  %p.submit
+    - unless @product.new_record?
+      %span.right= link_to "Delete", @product, :class => 'button purple', :method => :delete, :data => {:confirm => "Are you sure you wish to remove this notice?"}
+    = f.submit "Add Notice", :class => 'button green'
+    = link_to "Cancel", :products, :class => 'button'

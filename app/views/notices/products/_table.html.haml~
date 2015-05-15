@@ -1,0 +1,25 @@
+.table
+  %table.data
+    %thead
+      %tr
+        %th{:width => '20%'} Category
+        %th{:width => '40%'} Name
+        %th{:width => '25%'} Description
+        %th{:width => '15%'} Created on
+    %tbody
+      - if products.empty?
+        %tr.empty
+          %td{:colspan => 4} No products to display.
+      - else
+        - for category, products in products
+          %tr
+
+          - for product in products
+            - if product.tax_rate_id == current_user.id
+	      %tr
+                %td= category.name
+                %td= link_to product.name, [:edit, product]
+                %td= product.short_description
+                %td= product.created_at
+                  
+                  

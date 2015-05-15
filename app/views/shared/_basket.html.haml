@@ -1,0 +1,11 @@
+.basket
+  - if has_order? && current_order.has_items?
+    %p.quantity you have subscribed to <b>#{pluralize current_order.total_items, 'notice(s)'}</b>
+
+    %p.buttons
+      = link_to "View Subscribed Notices", basket_path
+     
+
+  - else
+    %p.empty <b>You have not subscribed to any notices.</b>
+

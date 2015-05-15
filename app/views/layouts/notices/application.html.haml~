@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title #{@page_title}
+    = stylesheet_link_tag 'shoppe/application'
+    = javascript_include_tag 'shoppe/application'
+    = csrf_meta_tags
+    :javascript
+      window.Shoppe = {}
+      window.Shoppe.currencyUnit = "#{h Shoppe.settings.currency_unit}";
+  %body
+    %nav.sidebar
+      %header.logo
+        %h1= link_to 'BU NoticeIt', root_path
+        %p v#{Shoppe::VERSION}
+
+
+      %ul
+        %li= link_to "Home", :root, :method => :get        
+        - if current_user == false
+          %li= link_to current_user
+        %li= link_to "My Notices", :products, :method => :get
+        %li= link_to "Logout", :logout, :method => :delete
+
+        
+          
+        
+    
+    %header.main
+      = yield :header
+      
+    #content  
+      = display_flash
+      %section.main
+        = yield
+
+    %footer 
+      %p.store= link_to "&larr; Goto #{Shoppe.settings.store_name}".html_safe, '/'
+      

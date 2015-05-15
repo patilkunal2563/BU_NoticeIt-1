@@ -1,0 +1,18 @@
+class PagesController < ApplicationController
+  
+ 
+
+  def home
+	if session[:shoppe_user_id]
+        
+        @products = Shoppe::Product.active.featured.includes(:default_image, :product_category, :variants).root	
+        
+	else 
+	
+       redirect_to '/shoppe/login'
+      end
+    
+  end
+  
+end
+

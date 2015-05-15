@@ -1,0 +1,6 @@
+- @page_title = "My Notices"
+= content_for :header do
+  %p.buttons
+    = link_to "Back to my Notices", :products, :class => 'button'
+  %h2.products Notices
+= render 'form'
