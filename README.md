@@ -1,4 +1,5 @@
                                     BUNoticeIT- A simple Online Notice Board
+           ---------------------------------------------------------------------------------------
                                     ==========================================
 ![alt tag](http://i172.photobucket.com/albums/w27/Kunal_Patil/scrshot_zpsuvwv2rrs.jpg)
 
@@ -15,8 +16,9 @@ Planned Features
 3)browse all notices by category and date 
 4)Meet-Up Calender 
 
-Minimum Viable Product The Application will contain the ATLEAST the following features
+Minimum Viable Product 
 ---------------------------------------------------------------------------------------
+The Application will contain the ATLEAST the following features
 1)Ability for the user to Create, Update & Delete a notice based on selecting 
 2)particular categories and sub-categories. 
 3)Filtering the notices based on date and basic categories. 
@@ -44,9 +46,9 @@ https://agileventures.org/projects/bu-noticit
 
 Collaborators
 ---------------------------------------------------------------------------------------
-1) Anup Patil
-2) Kunal Patil
-3) Aditya Tungaturthi
-4) Abhijit Jachak
+1) Anup Patil \n
+2) Kunal Patil \n
+3) Aditya Tungaturthi \n
+4) Abhijit Jachak \n
 
 
