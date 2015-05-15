@@ -25,12 +25,12 @@ The Application will contain the ATLEAST the following features
 
 Installation
 ---------------------------------------------------------------------------------------
-1) Download zip or do git clone https://github.com/ajachak1/BU_NoticeIt.git
-2) Do bundle install
-3) Do rake:db:migrate
-4) Run rails s
-5) Access homepage using http://localhost:3000
-6) Enjoy !!
+1) Download zip or do git clone https://github.com/ajachak1/BU_NoticeIt.git  
+2) Do bundle install  
+3) Do rake:db:migrate  
+4) Run rails s  
+5) Access homepage using http://localhost:3000  
+6) Enjoy !!  
 
 Usages
 ---------------------------------------------------------------------------------------
